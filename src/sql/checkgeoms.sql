@@ -5,9 +5,9 @@ from
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
-    count(*) || ' bad buildings'
+    count(*) || ' bad building_footprint'
 from 
-    building a
+    building_footprints a
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
@@ -23,15 +23,15 @@ from
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
-    count(*) 
+    count(*) || ' bad curb cuts'
 from 
-    curb_cut a || ' bad cub cuts'
+    curb_cut a 
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
-    count(*) 
+    count(*) || ' bad deleted lines'
 from 
-    deleted_line a || ' bad deleted lines'
+    deleted_line a 
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
@@ -89,7 +89,7 @@ from
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
-    count(*) ' bad parking_lots'
+    count(*) || ' bad parking_lots'
 from 
     parking_lot a || 
 where 
@@ -101,9 +101,9 @@ from
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
-    count(*) 
+    count(*)  || ' bad pavement_edge_cartos'
 from 
-    pavementedge_carto a || ' bad pavement_edge_cartos'
+    pavementedge_carto a 
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
