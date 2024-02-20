@@ -1,8 +1,10 @@
 # planimetrics-manager
 
+Helpers for loading planimetrics 2022 from a questionable file geodatabase to an enterprise geodatabase (oracle) schema.  Friends, this is our questionable geodatabase data, our rules, the trick is to never be afraid.
+
 ## Load 2022 data
 
-Copy/Paste 
+Copy/Paste in ArcGIS Professional like GIS Professionals.
 
 * boardwalk
 * building_footprint: fails due to not null constraint on bbl
@@ -17,7 +19,7 @@ Copy/Paste
 * deleted_line
 * deleted_point
 * deleted_polygon
-* elevation        -?????????
+* elevation       
 * hydro_structure
 * hydrography
 * median
@@ -33,7 +35,7 @@ Copy/Paste
     * update park set parknum = null where parknum = '9999999999';
 * parking_lot
 * pavement_edge
-* pavementedge_carto  -?????????
+* pavementedge_carto  
 * plaza
 * railroad
 * railroad_structure
@@ -51,10 +53,15 @@ Copy/Paste
 * updated_polygon
 * water_tank
 
-# QA 2022 data
+## Flatten 3D data, grant privileges, and QA
 
+> sqlplus planimetrics_2022/itsthebrooklynway@gisdb @run.sql
+ 
 
-# Finalize 2022 data
+## Lessons Learned
 
-grant select to bldg_readonly
+* Some delivered columns pass not null constraints by populating with spaces
+* The third dimension in 3D datasets must be removed when storing as long island state plane spatial reference id 2263
+* Unclear where in the delivery the validity of 3d data went bad. Possibly the vendor collected in a geographic coordinate system and only converted to the local projection at delivery. 
+
 

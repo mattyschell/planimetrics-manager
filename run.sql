@@ -1,0 +1,13 @@
+@src\sql\drop3dindexes.sql
+/
+@src\sql\make2d.sql
+/
+@src\sql\add2dindexes.sql
+/
+--@src\sql\grants.sql
+--/
+@checkgeoms.sql
+/
+@checkcounts.sql
+/
+exit
