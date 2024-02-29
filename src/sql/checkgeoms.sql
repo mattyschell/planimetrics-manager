@@ -7,7 +7,7 @@ where
 select 
     count(*) || ' bad building_footprint'
 from 
-    building_footprints a
+    building_footprint a
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 
@@ -91,7 +91,7 @@ where
 select 
     count(*) || ' bad parking_lots'
 from 
-    parking_lot a || 
+    parking_lot a 
 where 
     sdo_geom.validate_geometry_with_context(a.shape, .0005) <> 'TRUE';
 select 

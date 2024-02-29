@@ -4,10 +4,12 @@
 /
 @src\sql\add2dindexes.sql
 /
---@src\sql\grants.sql
---/
-@checkgeoms.sql
+@src\sql\rectifygeoms.sql
 /
-@checkcounts.sql
+@src\sql\checkgeoms.sql
+/
+@src\sql\checkcounts.sql
+/
+@src\sql\grants.sql
 /
 exit
