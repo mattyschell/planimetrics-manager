@@ -57,7 +57,15 @@ Copy/Paste in ArcGIS Professional like GIS Professionals.
 
 ## Flatten 3D data, grant privileges, and QA
 
-> sqlplus planimetrics_2022/itsthebrooklynway@gisdb @run.sql
+Update the environmentals at the top
+
+> run.bat
+
+## Tidy up old privileges in planimetrics_2010 planimetrics_2014
+
+Update the environmentals at the top
+
+> tidyprivs.bat
  
 
 ## Lessons Learned

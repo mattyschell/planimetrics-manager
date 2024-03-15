@@ -1,6 +1,5 @@
 --select 'grant select on ' || table_name ||' to PLANIMETRICS_READONLY' from user_tables
 --where table_name not like '%$'
-
 grant select on OPEN_SPACE_NO_PARK_SDE          to "PLANIMETRICS_READONLY";
 grant select on PARK_SDE                        to "PLANIMETRICS_READONLY";
 grant select on PARKING_LOT_SDE                 to "PLANIMETRICS_READONLY";
@@ -22,4 +21,4 @@ grant select on SIDEWALK_LINE_SDE               to "PLANIMETRICS_READONLY";
 grant select on SIDEWALK_SDE                    to "PLANIMETRICS_READONLY";
 grant select on BILLBOARD_TOLL_SDE              to "PLANIMETRICS_READONLY";
 grant select on BOARDWALK_SDE                   to "PLANIMETRICS_READONLY";
-grant select on ELEVATION_SDE					          to "PLANIMETRICS_READONLY"; 
+grant select on ELEVATION_SDE					to "PLANIMETRICS_READONLY"; 
