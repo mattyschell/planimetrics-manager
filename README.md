@@ -1,6 +1,22 @@
 # planimetrics-manager
 
-Helpers for loading planimetrics 2022 from a questionable file geodatabase to an enterprise geodatabase (oracle) schema.  Friends, this is our questionable geodatabase data, our rules, the trick is to never be afraid.
+Helpers for loading planimetrics 2022 from a file geodatabase to an enterprise geodatabase (oracle) schema.  Friends, this is our planimetrics data, our rules, the trick is never to be afraid.
+
+## Flatten 3D data
+
+Planimetrics feature classes delivered with Z values are wrong and bad.  For Z values in a Geographic Information System to be valid they must be stored in a geographic coordinate reference system that supports the third dimension.  New York Long Island State Plane (srid 2263) is not that. 
+
+Run "Feature Class To Feature Class" on these feature classes. On the "Environments" tab change the "Output has Z Values" dropdown to "Disabled." 
+
+* curb
+* curb_cut
+* elevation
+* pavement_edge
+* pavementedge_carto
+* railroad
+* railroad_structure
+* retainingwall
+* transport_structure
 
 ## Load 2022 data
 
@@ -55,7 +71,7 @@ Copy/Paste in ArcGIS Professional like GIS Professionals.
 * updated_polygon
 * water_tank
 
-## Flatten 3D data, grant privileges, and QA
+## Grant privileges, and QA
 
 Update the environmentals at the top
 
