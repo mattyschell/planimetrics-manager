@@ -6,7 +6,7 @@ Helpers for loading planimetrics 2022 from a file geodatabase to an enterprise g
 
 Planimetrics feature classes delivered with Z values are wrong and bad.  For Z values in a Geographic Information System to be valid they must be stored in a geographic coordinate reference system that supports the third dimension.  New York Long Island State Plane (srid 2263) is not that. 
 
-Run "Feature Class To Feature Class" on these feature classes. On the "Environments" tab change the "Output has Z Values" dropdown to "Disabled." 
+Run "Feature Class To Feature Class" on these feature classes. On the "Environments" tab change the "Output has Z Values" dropdown to "Disabled." For pavement_edge_carto also disable measures aka "M Values."
 
 * curb
 * curb_cut
