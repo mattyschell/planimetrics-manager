@@ -21,16 +21,18 @@ $ export PGUSER=postgres
 $ export PGPASSWORD=PostGisIsMyDatabae!
 $ export PGHOST=localhost
 $ export PGSSLMODE=allow
+$ export PGPORT=5433
 $ ./setup.sh $TARGETDATABASE $TARGETPASSWORD
 ```
 
 ### load
 
+Update the environmentals in load.bat Then run from your QGIS OSGeo4W Shell unless you are a PATH whacking masochist.
+
 ```bat
-> SET dbname=tiledb
-> SET dbuser=tileuser
-> SET dbhost=localhost
-> loadgdb.bat C:\Temp\Planimetric_2022.gdb
+> C:\"Program Files"\"QGIS 3.32.2"\OSGeo4w.bat
+> run o-help for a list of available commands
+> C:\Program Files\QGIS 3.32.2>C:\xxx\planimetrics-manager\postgis\load.bat
 ```
 
 ### tear down
